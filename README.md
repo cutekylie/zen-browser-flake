@@ -13,7 +13,7 @@ inputs = {
 
 ## Packages
 
-In the `configuration.nix` in the `environment.systemPackages`, or in home manager add in the `home.packages`:
+In the `configuration.nix` in the `environment.systemPackages`, or in `home.nix` add in the `home.packages`:
 
 (Also remember to add up into everything { inputs, ... })
 
