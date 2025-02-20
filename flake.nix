@@ -11,12 +11,8 @@
       version = "1.0.1-a.6";
       downloadUrl = {
         "specific" = {
-	  url = "https://github.com/zen-browser/desktop/releases/download/${version}/zen.linux-specific.tar.bz2";
-	  sha256 = "sha256:0jkzdrsd1qdw3pwdafnl5xb061vryxzgwmvp1a6ghdwgl2dm2fcz";
-	};
-	"generic" = {
-	  url = "https://github.com/zen-browser/desktop/releases/download/${version}/zen.linux-generic.tar.bz2";
-	  sha256 = "sha256:17c1ayxjdn8c28c5xvj3f94zjyiiwn8fihm3nq440b9dhkg01qcz";
+	  url = "https://github.com/zen-browser/desktop/releases/download/twilight/zen.linux-x86_64.tar.xz";
+	  sha256 = "sha256:0qn5qh7fp1a9mi1walrxaxq5h80n1y6h3i0mjqrp9m2p7gvz15x5";
 	};
       };
 
@@ -81,7 +77,6 @@
     in
     {
       packages."${system}" = {
-        generic = mkZen { variant = "generic"; };
         specific = mkZen { variant = "specific"; };
 	default = self.packages."${system}".specific;
       };
