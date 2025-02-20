@@ -2,33 +2,24 @@
 
 This is a flake for the Zen browser.
 
-Just add it to your NixOS `flake.nix` or home-manager:
+Just add it to your NixOS `flake.nix`:
 
 ```nix
 inputs = {
-  zen-browser.url = "github:MarceColl/zen-browser-flake";
+  zen-browser.url = "github:cutekylie/zen-browser-flake";
   ...
 }
 ```
 
 ## Packages
 
-This flake exposes two packages, corresponding to the `specific` and `generic` zen versions.
-The generic version maximizes compatibility with old CPUs and kernels by compiling it with some
-lower common denominator CFLAGS, the `specific` one targets newer CPUs and kernels but it may not
-work in your case.
+In the `configuration.nix` in the `environment.systemPackages`, or in home manager add in the `home.packages`:
 
-The `default` package is the `specific` one for backwards compatibility with older versions of the flake.
-
-Then in the `configuration.nix` in the `environment.systemPackages` add one of:
+(Also remember to add up into everything { inputs, ... })
 
 ```nix
 inputs.zen-browser.packages."${system}".default
-inputs.zen-browser.packages."${system}".specific
-inputs.zen-browser.packages."${system}".generic
 ```
-
-Depending on which version you want
 
 ```shell
 $ sudo nixos-rebuild switch
