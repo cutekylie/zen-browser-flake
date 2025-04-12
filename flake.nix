@@ -12,7 +12,7 @@
       downloadUrl = {
         "specific" = {
 	  url = "https://github.com/zen-browser/desktop/releases/download/twilight/zen.linux-x86_64.tar.xz";
-	  sha256 = "sha256:1dlz3vc6bq6cp1ird8i81x7gzy8nfz26mk2c0xkzcn95bizd9p8w";
+	  sha256 = "sha256:1h32dwricasfg804bghhsg3dvsfpri4ypvr474w9k2px2kf8hl4k";
 	};
       };
 
